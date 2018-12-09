@@ -1,6 +1,5 @@
 import Doc from '~/components/docs/doc'
 
-import { sergio } from '~/lib/data/team'
 import Now from '~/components/now/now'
 import { TerminalInput } from '~/components/text/terminal'
 
@@ -8,7 +7,6 @@ export const meta = {
   title: 'Frequently Asked Questions',
   description: 'The answers to our most frequently asked questions for Now and other ZEIT products and services',
   date: '30 Jan 2018',
-  authors: [sergio],
   editUrl: 'pages/docs/other/faq.md'
 }
 

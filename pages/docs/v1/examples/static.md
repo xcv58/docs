@@ -1,7 +1,6 @@
 import Doc from '~/components/docs/doc'
 import asset from 'next/asset'
 
-import { leo } from '~/lib/data/team'
 import Now from '~/components/now/now'
 import { InternalLink } from '~/components/text/link'
 import Image from '~/components/image'
@@ -14,7 +13,6 @@ export const meta = {
   title: 'Building a Static Website',
   description: 'Creating and deploying a static website with Now',
   date: '23 Feb 2017',
-  authors: [leo],
   editUrl: 'pages/docs/examples/static.md'
 }
 

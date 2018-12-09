@@ -1,5 +1,4 @@
 import Doc from '~/components/docs/doc'
-import { arunoda } from '~/lib/data/team'
 import Now from '~/components/now/now'
 import Image from '~/components/image'
 import Caption from '~/components/text/caption'

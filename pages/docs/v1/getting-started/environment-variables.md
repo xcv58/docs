@@ -1,6 +1,5 @@
 import Doc from '~/components/docs/doc'
 
-import { arunoda } from '~/lib/data/team'
 import { TerminalInput } from '~/components/text/terminal'
 import { InternalLink } from '~/components/text/link'
 import Now from '~/components/now/now'
@@ -9,7 +8,6 @@ export const meta = {
   title: 'Environment Variables',
   description: 'Setting up environment variables to use in your deployed Now apps',
   date: '6 August 2017',
-  authors: [arunoda],
   editUrl: 'pages/docs/getting-started/environment-variables.md'
 }
 

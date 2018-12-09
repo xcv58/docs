@@ -1,7 +1,6 @@
 import asset from 'next/asset'
 import Doc from '~/components/docs/doc'
 
-import { leo } from '~/lib/data/team'
 import Now from '~/components/now/now'
 import Image from '~/components/image'
 import { TerminalInput } from '~/components/text/terminal'
@@ -11,7 +10,6 @@ import { P } from '~/components/text/paragraph'
 export const meta = {
   title: 'Building a Basic GraphQL Application',
   date: '01 March 2017',
-  authors: [leo],
   editUrl: 'pages/docs/examples/graphql.md',
 }
 

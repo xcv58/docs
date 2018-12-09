@@ -1,7 +1,6 @@
 import asset from 'next/asset'
 import Doc from '~/components/docs/doc'
 
-import { arunoda } from '~/lib/data/team'
 import { TerminalInput } from '~/components/text/terminal'
 import { InternalLink } from '~/components/text/link'
 import Image from '~/components/image'
@@ -11,7 +10,6 @@ export const meta = {
   title: 'Scaling',
   description: 'Handling increased traffic by scaling your Now deployments',
   date: '10 August 2017',
-  authors: [arunoda],
   editUrl: 'pages/docs/getting-started/scaling.md'
 }
 

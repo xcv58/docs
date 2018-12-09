@@ -1,6 +1,5 @@
 import Doc from '~/components/docs/doc'
 
-import { jamo, rauchg } from '~/lib/data/team'
 import Now from '~/components/now/now'
 import { InternalLink } from '~/components/text/link'
 import {
@@ -12,7 +11,6 @@ export const meta = {
   title: 'Migrate Your App to Now Without a Downtime',
   description: 'Migrating your app from other hosting services to Now without incurring downtime',
   date: '04 Apr 2017 9:42 AM PDT',
-  authors: [jamo, rauchg],
   editUrl: 'pages/docs/guides/migrate-your-app.md'
 }
 

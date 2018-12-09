@@ -1,7 +1,6 @@
 import asset from 'next/asset'
 import Doc from '~/components/docs/doc'
 
-import { leo } from '~/lib/data/team'
 import Now from '~/components/now/now'
 import { InternalLink } from '~/components/text/link'
 import { TerminalInput } from '~/components/text/terminal'
@@ -12,7 +11,6 @@ export const meta = {
   title: 'Deploying Git Repositories',
   description: 'Targetting and deploying a Git repository with Now',
   date: '12 Mar 2017',
-  authors: [leo],
   editUrl: 'pages/docs/features/repositories.md'
 }
 

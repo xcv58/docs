@@ -1,7 +1,6 @@
 import asset from 'next/asset'
 import Doc from '~/components/docs/doc'
 
-import { leo } from '~/lib/data/team'
 import Now from '~/components/now/now'
 import Image from '~/components/image'
 import { InlineCode } from '~/components/text/code'
@@ -11,7 +10,6 @@ export const meta = {
   title: 'Global Scaling',
   description: 'Scaling your deployments to be instances in multiple global locations with Now',
   date: '01 Apr 2018',
-  authors: [leo],
   editUrl: 'pages/docs/features/scaling.md'
 }
 

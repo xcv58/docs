@@ -1,7 +1,6 @@
 import asset from 'next/asset'
 import Doc from '~/components/docs/doc'
 
-import { arunoda } from '~/lib/data/team'
 import { TerminalInput } from '~/components/text/terminal'
 import Image from '~/components/image'
 import Now from '~/components/now/now'
@@ -10,7 +9,6 @@ export const meta = {
   title: 'Logs',
   description: 'Using Now logs to keep track of your deployment activity',
   date: '4 August 2017',
-  authors: [arunoda],
   editUrl: 'pages/docs/getting-started/logs.md'
 }
 

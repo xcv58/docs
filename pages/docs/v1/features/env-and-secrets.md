@@ -1,6 +1,5 @@
 import Doc from '~/components/docs/doc'
 
-import { leo } from '~/lib/data/team'
 import Now from '~/components/now/now'
 import { InternalLink } from '~/components/text/link'
 import { P } from '~/components/text/paragraph'
@@ -10,7 +9,6 @@ export const meta = {
   title: 'Environment Variables and Secrets',
   description: 'Creating and using environment variables and creating and using secret environment variables in your Now deployments',
   date: '21 Feb 2017',
-  authors: [leo],
   editUrl: 'pages/docs/features/env-and-secrets.md'
 }
 
