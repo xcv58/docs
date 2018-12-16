@@ -35,6 +35,32 @@ class Header extends Component {
     }))
   }
 
+  handleClickEditProfile = e => {
+    if (!e.metaKey) {
+      e.preventDefault()
+
+      const { user } = this.props
+      if (!user) return
+
+      const urlSegment = user.username || 'profile'
+
+      if (window.location.pathname.includes(urlSegment)) {
+        Router.push(
+          { pathname: '/user-profile', query: { editing: '1' } },
+          `/${urlSegment}/edit`,
+          { shallow: true }
+        )
+      } else {
+        Router.push(
+          { pathname: '/user-profile', query: { editing: '1' } },
+          `/${urlSegment}/edit`
+        )
+      }
+
+      return
+    }
+  }
+
   renderMenuTrigger = ({ handleProviderRef, menu }) => {
     const { user } = this.props
     return (
@@ -120,6 +146,34 @@ class Header extends Component {
                     style={{ minWidth: 200 }}
                   >
                     <MenuItem>
+                      {user.username ? (
+                        <Link href={`/${user.username}`}>
+                          <a className="avatar-link">
+                            <Avatar user={user} size={50} />
+                          </a>
+                        </Link>
+                      ) : (
+                        <Avatar user={user} size={50} />
+                      )}
+                      <div className="avatar-user-info">
+                        {user.username && (
+                          <Link href={`/${user.username}`}>
+                            <a className="username">
+                              <span>{user.username}</span>
+                            </a>
+                          </Link>
+                        )}
+                        <a
+                          className="edit-profile"
+                          href={`/${user.username || 'profile'}/edit`}
+                          onClick={this.onEditProfileClick}
+                        >
+                          Edit Profile
+                        </a>
+                      </div>
+                    </MenuItem>
+                    <MenuDivider />
+                    <MenuItem>
                       <Link prefetch href="/dashboard">
                         <a>Dashboard</a>
                       </Link>
@@ -194,6 +248,53 @@ class Header extends Component {
 
           .arrow-toggle.active {
             transform: rotate(180deg);
+          }
+
+          .avatar-link {
+            flex: 0;
+            margin: -8px -15px;
+            padding: 8px 15px;
+          }
+          a.avatar-link:hover,
+          a.avatar-user-info:hover {
+            background: none !important;
+          }
+          .avatar-user-info {
+            margin-left: 15px;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 50px;
+          }
+          .avatar-user-info .username {
+            color: #000;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 3px;
+            text-decoration: none;
+          }
+          .avatar-user-info .edit-profile {
+            color: #0076ff;
+            font-weight: 500;
+            font-size: 12px;
+            text-decoration: none;
+            border: 0;
+            background: none;
+            padding: 0;
+            margin: 0;
+            outline: 0;
+            cursor: pointer;
+          }
+          .avatar-link:hover,
+          .username:hover,
+          .edit-profile:hover {
+            background-color: white;
+            opacity: 0.7;
+          }
+          .avatar-link,
+          .username,
+          .edit-profile {
+            transition: opacity 0.2s ease;
           }
 
           @media screen and (max-width: 950px) {
